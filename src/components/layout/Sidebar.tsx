@@ -8,13 +8,15 @@ import {
   BarChart3,
   Brain,
   DollarSign,
-  MessageSquare
+  MessageSquare,
+  Target
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
   { name: "Contacts", href: "/contacts", icon: Users },
+  { name: "Lead Generation", href: "/lead-generation", icon: Target },
   { name: "Deals", href: "/deals", icon: DollarSign },
   { name: "Tasks", href: "/tasks", icon: CheckSquare },
   { name: "Communications", href: "/communications", icon: MessageSquare },

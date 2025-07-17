@@ -8,6 +8,7 @@ import { AppLayout } from "./components/layout/AppLayout";
 import { Dashboard } from "./pages/Dashboard";
 import { Contacts } from "./pages/Contacts";
 import { ContactDetail } from "./pages/ContactDetail";
+import { LeadGeneration } from "./pages/LeadGeneration";
 import { Tasks } from "./pages/Tasks";
 import { EmailTemplates } from "./pages/EmailTemplates";
 import { EmailIntelligence } from "./pages/EmailIntelligence";
@@ -36,6 +37,7 @@ const App = () => (
             <Route index element={<Dashboard />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="contacts/:id" element={<ContactDetail />} />
+            <Route path="lead-generation" element={<LeadGeneration />} />
             <Route path="tasks" element={<Tasks />} />
             <Route path="templates" element={<EmailTemplates />} />
             <Route path="email-intelligence" element={<EmailIntelligence />} />
