@@ -6,17 +6,21 @@ import {
   Mail, 
   Settings,
   BarChart3,
-  Brain
+  Brain,
+  DollarSign,
+  MessageSquare
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
   { name: "Contacts", href: "/contacts", icon: Users },
+  { name: "Deals", href: "/deals", icon: DollarSign },
   { name: "Tasks", href: "/tasks", icon: CheckSquare },
+  { name: "Communications", href: "/communications", icon: MessageSquare },
   { name: "Email Templates", href: "/templates", icon: Mail },
   { name: "Email Intelligence", href: "/email-intelligence", icon: Brain },
-  { name: "Analytics", href: "/analytics", icon: BarChart3 },
+  { name: "Reports", href: "/reports", icon: BarChart3 },
   { name: "Settings", href: "/settings", icon: Settings },
 ];
 
