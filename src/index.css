@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SimpleConnect CRM Design System - Professional SaaS Interface */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Professional Blues & Grays */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+    
+    /* Brand Primary - Professional Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 217 91% 70%;
+    --primary-dark: 217 91% 50%;
+    
+    /* Surfaces & Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    --surface: 220 13% 98%;
+    --surface-hover: 220 13% 96%;
+    
+    /* Interactive States */
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 215 25% 27%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Neutral Grays */
+    --muted: 220 13% 95%;
+    --muted-foreground: 215 16% 47%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 13% 98%), hsl(220 13% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 98%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 69% / 0.05);
+    --shadow-card: 0 4px 6px -1px hsl(220 13% 69% / 0.1), 0 2px 4px -1px hsl(220 13% 69% / 0.06);
+    --shadow-elevated: 0 10px 15px -3px hsl(220 13% 69% / 0.1), 0 4px 6px -2px hsl(220 13% 69% / 0.05);
+    --shadow-primary: 0 4px 14px 0 hsl(217 91% 60% / 0.25);
+    
+    /* Animations */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-bounce: bounce 0.6s ease-in-out;
+    
+    /* Typography */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    
+    /* Spacing & Layout */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Popover & Overlays */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+  }
+
+  .dark {
+    /* Dark mode overrides */
+    --background: 215 28% 17%;
+    --foreground: 213 31% 91%;
+    --card: 215 28% 17%;
+    --card-foreground: 213 31% 91%;
+    --surface: 215 28% 15%;
+    --surface-hover: 215 28% 18%;
+    --primary: 217 91% 70%;
+    --border: 215 28% 25%;
+    --input: 215 28% 25%;
+    --muted: 215 28% 25%;
+    --muted-foreground: 215 20% 65%;
+  }
+}
+
+/* Custom Component Styles */
+@layer components {
+  /* CRM Specific Components */
+  .metric-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elevated)] transition-[var(--transition-base)];
+  }
+  
+  .contact-card {
+    @apply bg-card border border-border rounded-lg p-4 hover:shadow-[var(--shadow-card)] transition-[var(--transition-base)] cursor-pointer;
+  }
+  
+  .task-item {
+    @apply flex items-center gap-3 p-3 rounded-lg hover:bg-surface transition-[var(--transition-base)];
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .status-badge-success {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+  
+  .status-badge-warning {
+    @apply bg-warning/10 text-warning border border-warning/20;
+  }
+  
+  .status-badge-pending {
+    @apply bg-muted text-muted-foreground border border-border;
+  }
+  
+  /* Navigation & Layout */
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-[var(--transition-base)] hover:bg-surface;
+  }
+  
+  .nav-link-active {
+    @apply bg-primary text-primary-foreground shadow-[var(--shadow-primary)];
+  }
+  
+  /* Forms & Inputs */
+  .form-section {
+    @apply space-y-4 p-6 bg-card border border-border rounded-lg;
+  }
+  
+  /* AI Enhancement Styles */
+  .ai-suggestion {
+    @apply bg-gradient-to-r from-primary/5 to-accent/5 border-l-4 border-primary p-4 rounded-r-lg;
+  }
+  
+  .ai-loading {
+    @apply animate-pulse bg-gradient-to-r from-primary/10 to-primary/5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
