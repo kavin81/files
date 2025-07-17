@@ -10,6 +10,7 @@ import { Contacts } from "./pages/Contacts";
 import { ContactDetail } from "./pages/ContactDetail";
 import { Tasks } from "./pages/Tasks";
 import { EmailTemplates } from "./pages/EmailTemplates";
+import { EmailIntelligence } from "./pages/EmailIntelligence";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="contacts/:id" element={<ContactDetail />} />
             <Route path="tasks" element={<Tasks />} />
             <Route path="templates" element={<EmailTemplates />} />
+            <Route path="email-intelligence" element={<EmailIntelligence />} />
             <Route path="analytics" element={<div className="p-6"><h1 className="text-2xl font-bold">Analytics - Coming Soon</h1></div>} />
             <Route path="settings" element={<div className="p-6"><h1 className="text-2xl font-bold">Settings - Coming Soon</h1></div>} />
           </Route>

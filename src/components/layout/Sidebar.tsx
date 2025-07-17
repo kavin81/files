@@ -5,7 +5,8 @@ import {
   CheckSquare, 
   Mail, 
   Settings,
-  BarChart3
+  BarChart3,
+  Brain
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +15,7 @@ const navigation = [
   { name: "Contacts", href: "/contacts", icon: Users },
   { name: "Tasks", href: "/tasks", icon: CheckSquare },
   { name: "Email Templates", href: "/templates", icon: Mail },
+  { name: "Email Intelligence", href: "/email-intelligence", icon: Brain },
   { name: "Analytics", href: "/analytics", icon: BarChart3 },
   { name: "Settings", href: "/settings", icon: Settings },
 ];
