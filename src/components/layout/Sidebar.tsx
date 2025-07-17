@@ -20,11 +20,11 @@ const navigation = [
 
 export const Sidebar = () => {
   return (
-    <div className="w-64 bg-card border-r border-border h-screen flex flex-col">
+    <div className="w-64 bg-gradient-card border-r border-border/50 h-screen flex flex-col backdrop-blur-xl">
       {/* Logo and Brand */}
-      <div className="p-6 border-b border-border">
-        <h1 className="text-xl font-bold text-primary">SimpleConnect</h1>
-        <p className="text-sm text-muted-foreground">CRM Platform</p>
+      <div className="p-6 border-b border-border/50">
+        <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">SimpleConnect</h1>
+        <p className="text-sm text-muted-foreground">AI-Powered CRM</p>
       </div>
 
       {/* Navigation */}
@@ -48,13 +48,13 @@ export const Sidebar = () => {
       </nav>
 
       {/* User Section */}
-      <div className="p-4 border-t border-border">
-        <div className="flex items-center gap-3 p-3 rounded-lg bg-surface">
-          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-xs font-medium text-primary-foreground">JD</span>
+      <div className="p-4 border-t border-border/50">
+        <div className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r from-surface/50 to-surface/30 backdrop-blur-sm border border-border/20 hover:bg-surface/60 transition-all duration-300">
+          <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center shadow-[var(--shadow-primary)] glow-primary">
+            <span className="text-sm font-semibold text-primary-foreground">JD</span>
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium truncate">John Doe</p>
+            <p className="text-sm font-semibold truncate">John Doe</p>
             <p className="text-xs text-muted-foreground truncate">john@company.com</p>
           </div>
         </div>

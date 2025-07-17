@@ -49,21 +49,24 @@ const recentTasks = [
 
 export const Dashboard = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 relative">
+      {/* Modern Background Pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),transparent)] pointer-events-none" />
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between relative z-10">
         <div>
-          <h1 className="text-3xl font-bold">Dashboard</h1>
-          <p className="text-muted-foreground">Welcome back! Here's what's happening with your business.</p>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Dashboard</h1>
+          <p className="text-muted-foreground mt-2">Welcome back! Here's what's happening with your business.</p>
         </div>
-        <Button className="gap-2">
+        <Button className="gap-2 bg-gradient-primary hover:opacity-90 transition-opacity shadow-[var(--shadow-primary)] glow-primary">
           <Plus className="h-4 w-4" />
           Add Contact
         </Button>
       </div>
 
       {/* Metrics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
         {metrics.map((metric) => (
           <Card key={metric.title} className="metric-card">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
@@ -90,13 +93,13 @@ export const Dashboard = () => {
       </div>
 
       {/* Recent Activity Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative z-10">
         {/* Recent Contacts */}
-        <Card>
+        <Card className="glass-card">
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               Recent Contacts
-              <Button variant="ghost" size="sm">View All</Button>
+              <Button variant="ghost" size="sm" className="hover:bg-surface/50">View All</Button>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -122,11 +125,11 @@ export const Dashboard = () => {
         </Card>
 
         {/* Recent Tasks */}
-        <Card>
+        <Card className="glass-card">
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               Upcoming Tasks
-              <Button variant="ghost" size="sm">View All</Button>
+              <Button variant="ghost" size="sm" className="hover:bg-surface/50">View All</Button>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
