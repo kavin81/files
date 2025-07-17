@@ -36,7 +36,7 @@ export const Sidebar = () => {
             end={item.href === "/"}
             className={({ isActive }) =>
               cn(
-                "nav-link",
+                "nav-link group",
                 isActive && "nav-link-active"
               )
             }

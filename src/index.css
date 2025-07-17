@@ -145,7 +145,7 @@
   
   /* Enhanced Navigation */
   .nav-link {
-    @apply flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-surface/80 relative overflow-hidden group;
+    @apply flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-surface/80 relative overflow-hidden;
   }
   
   .nav-link::before {
